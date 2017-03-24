@@ -120,14 +120,16 @@ function updateGame () {
 		}
 	}
 	if (level.currentScore >= 94 && levelCleared) {
-		// setup a message to display
+		// display messages set up here
 		context.fillStyle = '#8060B6';
 		context.font = '3em "Papyrus"';
 		var message3 = 'Level ' + levelCount + ' cleared!';
 		var message4 = 'You Win!';
+		var message5 = 'Stay here if you want to play again!';
 		context.fillText(message3, (canvas.width - context.measureText(message3).width)/2, canvas.height/2);
 		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.25);
-		// display the message for 2 seconds before clearing it and starting a new level
+		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.15);
+		// display the message for 5 seconds before clearing it and starting a new game
 		if (timeout === undefined) {
 			timeout = window.setTimeout(function () {
 				levelCleared = false;
@@ -139,7 +141,7 @@ function updateGame () {
 				player.reset();
 				window.clearTimeout(timeout);
 				timeout = undefined;
-			}, 4000);
+			}, 5000);
 		}
 	}
 }
