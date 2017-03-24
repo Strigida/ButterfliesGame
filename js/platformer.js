@@ -125,10 +125,10 @@ function updateGame () {
 		context.font = '4em "Papyrus"';
 		var message3 = 'Level ' + levelCount + ' cleared!';
 		var message4 = 'You Win!';
-		var message5 = 'Stay here if you want to play again!';
+		var message5 = 'Stay and play again!';
 		context.fillText(message3, (canvas.width - context.measureText(message3).width)/2, canvas.height/2);
-		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.25);
-		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.15);
+		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.5);
+		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.25);
 		// display the message for 5 seconds before clearing it and starting a new game
 		if (timeout === undefined) {
 			timeout = window.setTimeout(function () {
