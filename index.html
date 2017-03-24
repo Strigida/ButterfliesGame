@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>
+        42 Butterflies!
+    </title>
+    <!-- let's just plop our canvas in the top left forevs -->
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div>
+<audio id="music" src="42butterflies.mp3" type="audio/mpeg" loop="true">
+</audio>
+<h1>
+    Butterflies collected: <span id="score"></span>
+</h1>
+
+    <button id="playButton"><i class="fa fa-volume-off"></i></button>
+    <button id="pauseButton"><i class="fa fa-volume-up"></i></button>
+
+    <canvas id="canvas">
+    </canvas>
+    <script type="text/javascript" src="js/butterfly.js"></script>
+    <script type="text/javascript" src="js/sprite.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/level.js"></script>
+<script type="text/javascript" src="js/platformer.js"></script>
+</div>
+<div class="footer">
+	<a class="flex-child" href="../" style=>Home</a>
+	<a class="flex-child" href="42-butterflies.zip" target="_blank">Download the source</a>
+	<a class="flex-child" href="tutorial.zip" target="_blank">Download the tutorial steps</a>
+</div>
+
+</body>
+</html>
