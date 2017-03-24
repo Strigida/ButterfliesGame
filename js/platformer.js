@@ -103,7 +103,7 @@ function updateGame () {
 	}
 	if (level.currentScore < 94 && levelCleared) {
 		// setup a message to display
-		context.fillStyle = '#8060B6';
+		context.fillStyle = '#257c79';
 		context.font = '6em "Papyrus"';
 		var message1 = 'Level ' + levelCount + ' cleared!';
 		context.fillText(message1, (canvas.width - context.measureText(message1).width)/2, canvas.height/2);
@@ -121,8 +121,8 @@ function updateGame () {
 	}
 	if (level.currentScore >= 94 && levelCleared) {
 		// display messages set up here
-		context.fillStyle = '#8060B6';
-		context.font = '3em "Papyrus"';
+		context.fillStyle = '#257c79';
+		context.font = '4em "Papyrus"';
 		var message3 = 'Level ' + levelCount + ' cleared!';
 		var message4 = 'You Win!';
 		var message5 = 'Stay here if you want to play again!';
