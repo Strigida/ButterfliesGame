@@ -124,7 +124,7 @@ function updateGame () {
 		
 		context.fillText(message3, (canvas.width - context.measureText(message3).width)/2, canvas.height/2);
 		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.25);
-		platformer.appendChild(button);
+		context.fillStyle.appendChild(button);
 		//context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.25);
 		// display the message for 2 seconds before clearing it and starting a new level
 		if (timeout === undefined) {
