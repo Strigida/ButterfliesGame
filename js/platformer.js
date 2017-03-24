@@ -58,6 +58,11 @@ document.body.addEventListener('keyup', function (e) {
 	keys[e.keyCode] = false;
 });
 
+// on click event
+document.addEventListener('click', function () {
+	update();
+});
+
 // update the game canvas
 function updateGame () {
 	// check for keys pressed
@@ -125,7 +130,7 @@ function updateGame () {
 		context.fillText(message3, (canvas.width - context.measureText(message3).width)/2, canvas.height/2);
 		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.25);
 		//canvas.appendChild(button);
-		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.25);
+		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.15);
 		// display the message for 2 seconds before clearing it and starting a new level
 		if (timeout === undefined) {
 			timeout = window.setTimeout(function () {
@@ -138,7 +143,7 @@ function updateGame () {
 				//button.appendChild(initButton);
 				//button.x = 400;
 				//button.y = 400;
-				message5.onclick(function() {
+				message5.onClick (function() {
 				levelCleared = false;
 				levelCount = 1;
 				level.reset(level.maxScore + Math.ceil(level.maxScore/2));
