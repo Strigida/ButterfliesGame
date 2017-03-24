@@ -135,7 +135,7 @@ function updateGame () {
 				score = 0;
 				level.currentScore = 0;
 				scoreCard.innerHTML = 0;
-				level.reset(level.maxScore + Math.ceil(level.maxScore/2));
+				level.reset(42);
 				player.reset();
 				window.clearTimeout(timeout);
 				timeout = undefined;
