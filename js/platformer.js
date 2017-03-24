@@ -132,6 +132,9 @@ function updateGame () {
 			timeout = window.setTimeout(function () {
 				levelCleared = false;
 				levelCount = 1;
+				score = 0;
+				level.currentScore = 0;
+				scoreCard.innerHTML = 0;
 				level.reset(level.maxScore + Math.ceil(level.maxScore/2));
 				player.reset();
 				window.clearTimeout(timeout);
