@@ -125,31 +125,18 @@ function updateGame () {
 		context.font = '3em "Papyrus"';
 		var message3 = 'Level ' + levelCount + ' cleared!';
 		var message4 = 'You Win!';
-		var message5 = 'Play Again';
-		
 		context.fillText(message3, (canvas.width - context.measureText(message3).width)/2, canvas.height/2);
 		context.fillText(message4, (canvas.width - context.measureText(message4).width)/2, canvas.height/1.25);
-		//canvas.appendChild(button);
-		context.fillText(message5, (canvas.width - context.measureText(message5).width)/2, canvas.height/1.15);
 		// display the message for 2 seconds before clearing it and starting a new level
 		if (timeout === undefined) {
 			timeout = window.setTimeout(function () {
-				//levelCleared = false;
-				//levelCount++;
-				//level.reset(level.maxScore + Math.ceil(level.maxScore/2));
-				//player.reset();
-				window.clearTimeout(timeout);
-				timeout = undefined;
-				//button.appendChild(initButton);
-				//button.x = 400;
-				//button.y = 400;
-				message5.onClick (function() {
 				levelCleared = false;
 				levelCount = 1;
 				level.reset(level.maxScore + Math.ceil(level.maxScore/2));
 				player.reset();
-				});
-			}, 2000);
+				window.clearTimeout(timeout);
+				timeout = undefined;
+			}, 4000);
 		}
 	}
 }
